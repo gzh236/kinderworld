@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Marquee</title>
+    <!-- <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            background-color: #f4f6f8;
+            /* Light blue-grey bg from your image */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h3 {
+            text-align: center;
+            color: #1e1e50;
+            /* Dark Navy Blue */
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        /* 1. THE WINDOW */
+        .marquee-container {
+            width: 100%;
+            overflow: hidden;
+            /* Hides the logos when they move off screen */
+            background: white;
+            /* Optional: Make the strip white */
+            padding: 40px 0;
+            white-space: nowrap;
+            /* Forces logos to stay in one long line */
+            position: relative;
+        }
+
+        /* 2. THE TRACK (Moves left) */
+        .marquee-track {
+            display: inline-block;
+            animation: scroll 60s linear infinite;
+            /* 20s = speed. Adjust to make faster/slower */
+        }
+
+        /* 3. THE LOGOS */
+        .marquee-track img {
+            height: 100px;
+            /* Control logo height */
+            margin: 0 40px;
+            /* Space between logos */
+            vertical-align: middle;
+
+            /* Optional: Make them grayscale until hovered? */
+            /* filter: grayscale(100%); */
+            /* transition: 0.3s; */
+        }
+
+        /* Optional: Hover effect */
+        /* .marquee-track img:hover { filter: grayscale(0%); } */
+
+        /* 4. THE ANIMATION KEYFRAMES */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                /* We move it LEFT by -50% because we doubled the content. 
+                   Once it hits -50%, it snaps back to 0 without anyone noticing. */
+                transform: translateX(-50%);
+            }
+        }
+
+        /* PAUSE ON HOVER (Optional interaction) */
+        .marquee-container:hover .marquee-track {
+            animation-play-state: paused;
+        }
+    </style> -->
+</head>
+
+<body>
+
+    <h3>As featured in</h3>
+
+    <div class="marquee-container">
+        <div class="marquee-track">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/66/CNN_International_logo.svg" alt="CNN">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+        </div>
+    </div>
+
+</body>
+
+</html>
