@@ -87,6 +87,107 @@ nav button:hover {
     color: #ffffff;
 }
 
+#methodology-section {
+    padding: 6rem 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fcf3e0;
+    text-align: center;
+}
+
+#methodology-section h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 3rem;
+    color: #212374;
+    margin-bottom: 1rem;
+}
+
+#methodology-section h4 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    max-width: 800px;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 4rem;
+}
+
+.methodology-container {
+    display: flex;
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+    align-items: stretch;
+    /* Ensures all cards are same height */
+}
+
+.card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 380px;
+    border-radius: 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card.reverse {
+    flex-direction: column-reverse;
+}
+
+.card-image {
+    height: 280px;
+    /* Fixed height for consistency */
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.card-text {
+    padding: 2.5rem 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Aligns titles to the same top starting point */
+}
+
+.card-text h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.card-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.card-teal {
+    background-color: #5fb4b4;
+    color: white;
+}
+
+.card-blue {
+    background-color: #b4d4f2;
+    color: #212374;
+}
+
+.card-red {
+    background-color: #d1432f;
+    color: white;
+}
+
 #vertical-split {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -131,6 +232,15 @@ nav button:hover {
 #counter-section {
     background-image: url("assets/counter_cover.png");
     background-size: cover;
+}
+
+#methodology-section {
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #fcf3e0;
 }
 
 .footer-text {
