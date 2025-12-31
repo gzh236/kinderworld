@@ -95,7 +95,6 @@ nav.scrolled .nav-links li a:hover {
 
 .menu-toggle {
     display: none;
-    /* Hidden on desktop */
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -105,6 +104,13 @@ nav.scrolled .nav-links li a:hover {
     cursor: pointer;
     padding: 0;
     z-index: 2001;
+}
+
+/* Ensure it only shows on mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
 }
 
 .menu-toggle span {
@@ -205,13 +211,22 @@ nav.scrolled .logo-container div {
 }
 
 #view-curriculum-btn {
-    background: whitesmoke;
-    /* Use 'background' shorthand to clear the gradient */
+    background: #ffffff !important;
     color: #212374 !important;
-    /* !important is needed to override .register-btn's !important */
-    font-weight: 600;
-    font-size: 1.2rem;
-    border: 1px solid rgba(33, 35, 116, 0.1);
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: 2px solid #212374;
+    padding: 1rem 2.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.methodology-bottom-container {
+    width: 100%;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
 }
 
 .methodology-container {
@@ -341,16 +356,18 @@ nav.scrolled .logo-container div {
 
 #methodology-bottom-left {
     position: absolute;
-    bottom: -5%;
-    left: 5%;
+    bottom: -40px;
+    /* Flush with section bottom */
+    left: 20px;
     line-height: 0;
     z-index: 1;
 }
 
 #methodology-bottom-right {
     position: absolute;
-    bottom: -5%;
-    right: 5%;
+    bottom: -40px;
+    /* Flush with section bottom */
+    right: 20px;
     line-height: 0;
     z-index: 1;
 }
