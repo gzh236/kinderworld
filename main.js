@@ -2,7 +2,48 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Initialize Components
     setupMarquee();
     runCounters();
+    setupMobileMenu();
+    setupScrollNav();
 });
+
+/* --- FEATURE -1: SMART NAVBAR --- */
+function setupScrollNav() {
+    const nav = document.querySelector('nav');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+}
+
+/* --- FEATURE 0: MOBILE MENU --- */
+function setupMobileMenu() {
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+    const backdrop = document.getElementById('menu-backdrop');
+    const links = document.querySelectorAll('.nav-links a');
+
+    if (!mobileBtn) return;
+
+    function toggleMenu() {
+        mobileBtn.classList.toggle('open');
+        navLinks.classList.toggle('active');
+        backdrop.classList.toggle('active');
+        document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+    }
+
+    mobileBtn.addEventListener('click', toggleMenu);
+    backdrop.addEventListener('click', toggleMenu);
+
+    // Close menu when a link is clicked
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navLinks.classList.contains('active')) toggleMenu();
+        });
+    });
+}
 
 /* --- FEATURE 1: INFINITE MARQUEE --- */
 function setupMarquee() {

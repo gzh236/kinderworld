@@ -6,24 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kinderworld</title>
     <link rel="stylesheet" href="index.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..600,100&display=swap"
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
+    <nav>
+        <div class="logo-container">
+            <img src="assets/logos/kinderworld_logo.png" alt="Kinderworld Montessori Logo" />
+            <div class="lora-regular">Kinderworld Montessori</div>
+        </div>
+
+        <!-- Hamburger Menu Button -->
+        <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links">
+            <li class="lora-regular"><a href="#about">About Us</a></li>
+            <li class="lora-regular"><a href="#curriculum">Our Curriculum</a></li>
+            <li class="lora-regular"><a href="#centres">Our Centres</a></li>
+            <li class="lora-regular"><button class="register-btn">Register Now</button></li>
+        </ul>
+    </nav>
+    <div class="menu-backdrop" id="menu-backdrop"></div>
     <div id="nav-wrapper">
-        <nav>
-            <div class="logo-container">
-                <img src="assets/logos/kinderworld_logo.png" alt="Kinderworld Montessori Logo" />
-                <div>Kinderworld Montessori</div>
-            </div>
-            <ul>
-                <li>About Us</li>
-                <li>Our Curriculum</li>
-                <li>Our Centres</li>
-                <li><button>Register Now</button></li>
-            </ul>
-        </nav>
         <!-- Media Section -->
         <div class="media" id="vertical-split" image="assets/cover_page1.png">
             <div class="vertical-left">
@@ -117,9 +129,9 @@
 
             <!-- Counter 2: Students -->
             <div class="counter-item counter-teal">
-                <div class="flower-decoration">
-                    <!-- <img src="assets/logos/flower_icon.png" alt="" class="flower-img"> -->
-                </div>
+                <!-- <div class="flower-decoration">
+                    <img src="assets/logos/flower_icon.png" alt="" class="flower-img">
+                </div> -->
                 <div class="counter-content">
                     <span class="number counter" data-target="2500" data-suffix="+">0</span>
                     <p class="label">students<br>graduated</p>
@@ -142,7 +154,6 @@
         <h4>At Kinderworld Montessori, children grow into confident, curious, and resilient individuals, prepared for
             life’s next steps.</h4>
         <div class="methodology-container">
-
             <article class="card card-teal">
                 <div class="card-image">
                     <img src="assets/methodology1.png" alt="Happy children learning together">
@@ -178,6 +189,17 @@
                 </div>
             </article>
         </div>
+        <div>
+            <section id="methodology-bottom-left">
+                <img src="assets/bottom_left_cuties.png" alt="cute, happy, kinderworld" />
+            </section>
+            <section id="view-curriculum">
+                <button id="view-curriculum-btn" class="register-btn lora-regular">View our curriculum</button>
+            </section>
+            <section id="methodology-bottom-right">
+                <img src="assets/bottom_right_cuties.png" alt="cute, happy, kinderworld" />
+            </section>
+        </div>
     </section>
 
     <footer>
@@ -185,7 +207,7 @@
             <h4 class="footer-text">Kinderworld Montessori</h4>
             <h5 class="footer-text">Yayasan Putra Putri Bangsa</h5>
             <h6 class="footer-text">© 2025 Yayasan Putra Putri Bangsa. All Right Reserved.</h6>
-            <a href="https://www.instagram.com/kinderworld.bsd/?hl=en">
+            <a target="_blank" href="https://www.instagram.com/kinderworld.bsd/?hl=en">
                 <img class="footer-icon" src="assets/logos/instagram_logo.png" alt="Instagram Kinderworld Montessori">
             </a>
             <section id="footer-cuties">

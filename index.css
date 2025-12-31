@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+/* Fonts are loaded in HTML */
 
 :root {
     --primary-color: #4a90e2;
@@ -7,10 +7,15 @@
     --button-gradient: linear-gradient(135deg, #6e8efb, #a777e3);
 }
 
+html {
+    scroll-behavior: smooth;
+    /* Makes the transition between sections feel like silk */
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Lora', serif;
     background-color: var(--background-color);
     color: var(--text-color);
 }
@@ -19,19 +24,29 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
+    padding: 1.5rem 5%;
     background: transparent;
-    backdrop-filter: blur(10px);
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 2000;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-nav img {
-    height: 80px;
+/* Smart state when scrolling down */
+nav.scrolled {
+    padding: 0.8rem 5%;
+    /* Slightly slimmer when scrolling */
+    /* background: rgba(255, 255, 255, 0.8); */
+    background: #fcf3e0;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-nav ul {
+.nav-links {
     display: flex;
     list-style: none;
     margin: 0;
@@ -40,31 +55,86 @@ nav ul {
     gap: 2rem;
 }
 
-nav ul li {
+.nav-links li a {
+    text-decoration: none;
+    color: white;
     font-weight: 500;
-    cursor: pointer;
     transition: color 0.3s ease;
 }
 
-nav ul li:hover {
+nav.scrolled .nav-links li a {
+    color: #212374;
+    /* Flips to navy blue for readability on scroll */
+}
+
+.nav-links li a:hover {
+    color: #ffd700;
+}
+
+nav.scrolled .nav-links li a:hover {
     color: var(--primary-color);
 }
 
-nav button {
+.register-btn {
     background: var(--button-gradient);
-    color: white;
+    color: white !important;
     border: none;
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 1.8rem;
     border-radius: 50px;
     font-weight: 600;
+    font-family: 'Lora', serif;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 15px rgba(110, 142, 251, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-nav button:hover {
+.register-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(110, 142, 251, 0.6);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.menu-toggle {
+    display: none;
+    /* Hidden on desktop */
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 2001;
+}
+
+.menu-toggle span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.menu-backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    z-index: 1500;
+}
+
+.lora-regular {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.white {
+    color: white;
 }
 
 .media,
@@ -75,41 +145,73 @@ nav button:hover {
     align-items: center;
 }
 
+.logo-container img {
+    height: 70px;
+    width: auto;
+}
+
+.logo-container div {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+nav.scrolled .logo-container div {
+    color: #212374;
+    /* Navy for readability on scroll */
+}
+
 .vertical-left {
     padding-left: 120px;
     padding-right: 60px;
 }
 
 .mission-statement {
-    font-family: 'Fraunces', serif;
+    font-family: 'Caprasimo', cursive;
     font-size: 4rem;
     line-height: 1.1;
     color: #ffffff;
 }
 
 #methodology-section {
-    padding: 6rem 5%;
+    padding: 6rem 5% 10rem 5%;
+    /* Extra bottom padding for the cuties */
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #fcf3e0;
     text-align: center;
+    position: relative;
+    /* Base for absolute positioning */
+    overflow: hidden;
+    /* Prevents cuties from causing scrollbars */
 }
 
 #methodology-section h1 {
-    font-family: 'Fraunces', serif;
+    font-family: 'Caprasimo', cursive;
     font-size: 3rem;
     color: #212374;
     margin-bottom: 1rem;
 }
 
 #methodology-section h4 {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Lora', serif;
     font-weight: 400;
     max-width: 800px;
     line-height: 1.6;
     color: #444;
     margin-bottom: 4rem;
+}
+
+#view-curriculum-btn {
+    background: whitesmoke;
+    /* Use 'background' shorthand to clear the gradient */
+    color: #212374 !important;
+    /* !important is needed to override .register-btn's !important */
+    font-weight: 600;
+    font-size: 1.2rem;
+    border: 1px solid rgba(33, 35, 116, 0.1);
 }
 
 .methodology-container {
@@ -162,7 +264,8 @@ nav button:hover {
 }
 
 .card-text h3 {
-    font-family: 'Fraunces', serif;
+    font-family: 'Lora', serif;
+    font-weight: 700;
     font-size: 2rem;
     line-height: 1.2;
     margin-bottom: 1.5rem;
@@ -192,7 +295,9 @@ nav button:hover {
     display: grid;
     grid-template-columns: 60% 40%;
     height: 100vh;
-    margin-top: 2.5rem;
+    padding-top: 80px;
+    /* Pushes text below fixed transparent nav */
+    box-sizing: border-box;
 }
 
 #innovative,
@@ -234,13 +339,31 @@ nav button:hover {
     background-size: cover;
 }
 
-#methodology-section {
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    background-color: #fcf3e0;
+#methodology-bottom-left {
+    position: absolute;
+    bottom: -5%;
+    left: 5%;
+    line-height: 0;
+    z-index: 1;
+}
+
+#methodology-bottom-right {
+    position: absolute;
+    bottom: -5%;
+    right: 5%;
+    line-height: 0;
+    z-index: 1;
+}
+
+#methodology-bottom-left img,
+#methodology-bottom-right img {
+    height: 140px;
+    /* Sized similarly to footer cuties */
+    display: block;
+}
+
+#view-curriculum {
+    padding-top: 3rem;
 }
 
 .footer-text {
@@ -263,8 +386,8 @@ nav button:hover {
     text-align: center;
     color: #1e1e50;
     /* Navy Blue */
-    font-family: 'Fraunces', serif;
-    /* Matching your font */
+    font-family: 'Lora', serif;
+    font-weight: 700;
     font-size: 1.5rem;
     margin-bottom: 30px;
 }
@@ -289,7 +412,127 @@ nav button:hover {
     /* Spacing between logos */
 }
 
-/* The Animation */
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+
+    /* Navigation */
+    .menu-toggle {
+        display: flex;
+        /* Show hamburger */
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        /* Hidden by default */
+        width: 80%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2.5rem;
+        transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: 2000;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+        color: var(--text-color);
+        padding: 0;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .menu-backdrop.active {
+        display: block;
+    }
+
+    /* Hamburger Animation to X */
+    .menu-toggle.open span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Hero Section */
+    #vertical-split {
+        grid-template-columns: 100%;
+        height: auto;
+        min-height: 100vh;
+        padding-top: 80px;
+    }
+
+    .vertical-left {
+        padding: 2rem 5%;
+        text-align: center;
+    }
+
+    .mission-statement {
+        font-size: 3rem;
+    }
+
+    /* Marquee */
+    .marquee-section h3 {
+        font-size: 1.2rem;
+        padding: 0 5%;
+    }
+
+    /* Counters */
+    .counter-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .counter-item {
+        width: 280px;
+        height: 280px;
+    }
+
+    .counter-content .number {
+        font-size: 3.5rem;
+    }
+
+    /* Methodology */
+    .methodology-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 100%;
+        min-width: unset;
+    }
+
+    .card.reverse {
+        flex-direction: column;
+        /* Match standard mobile flow */
+    }
+
+    #methodology-section h1 {
+        font-size: 2.2rem;
+        padding: 0 5%;
+    }
+
+    /* Footer */
+    #footer-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    #footer-cuties {
+        position: static;
+        margin-top: 2rem;
+    }
+}
+
 @keyframes scroll {
     0% {
         transform: translateX(0);
@@ -354,16 +597,17 @@ nav button:hover {
 
 /* Typography */
 .counter-content .number {
-    font-family: 'Fraunces', serif;
+    font-family: 'Caprasimo', cursive;
     font-size: 5rem;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 1;
     display: block;
 }
 
 .counter-content .label {
-    font-family: 'Fraunces', serif;
+    font-family: 'Lora', serif;
     font-size: 1.5rem;
+    font-weight: 600;
     line-height: 1.2;
     margin-top: 5px;
 }
