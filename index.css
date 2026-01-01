@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 /* Fonts are loaded in HTML */
 
 :root {
@@ -180,6 +184,20 @@ nav.scrolled .logo-container div {
     color: #ffffff;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.caprasimo {
+    font-family: 'Caprasimo', cursive;
+    color: #212374;
+    font-size: 3.5rem;
+}
+
+.section-padding {
+    padding: 40px 5%;
+}
+
 #methodology-section {
     padding: 6rem 5% 10rem 5%;
     /* Extra bottom padding for the cuties */
@@ -218,6 +236,196 @@ nav.scrolled .logo-container div {
     border: 2px solid #212374;
     padding: 1rem 2.5rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#testimonials-section {
+    padding: 100px 0 20px 0;
+    /* Reduced bottom padding */
+    background-image: url('assets/counter_cover.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+#testimonials-section h1 {
+    font-size: 3.5rem;
+    color: #212374;
+    margin-bottom: 70px;
+    text-align: center;
+    font-family: 'Caprasimo', cursive;
+}
+
+/* Rigid Container */
+.carousel-container {
+    position: relative;
+    width: 90%;
+    max-width: 1080px;
+    /* (320px * 3) + (40px * 2) + extra breathing room */
+    margin: 0 auto;
+}
+
+/* Viewport with padding for shadows */
+.testimonial-viewport {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0 100px 0;
+    /* Tightened shadow space */
+}
+
+.testimonial-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+}
+
+.testimonial-item {
+    flex: 0 0 300px !important;
+    width: 300px !important;
+    margin-right: 60px !important;
+    /* Spacious gap from reference */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0 !important;
+}
+
+/* The Card itself */
+.test-card {
+    width: 100%;
+    min-height: 420px;
+    padding: 4rem 2.8rem;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+    position: relative;
+    z-index: 2;
+}
+
+.test-green {
+    background-color: #10B981 !important;
+}
+
+.test-blue {
+    background-color: #3B82F6 !important;
+}
+
+.test-teal {
+    background-color: #93C5FD !important;
+}
+
+.test-card h3 {
+    font-size: 1.85rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.test-card h3 span {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    opacity: 0.95;
+    margin-top: 10px;
+}
+
+.test-card p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Elegant Deep Shadow */
+.card-shadow {
+    width: 85%;
+    height: 40px;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+    position: absolute;
+    bottom: -80px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Navigation Buttons - Absolute Positioned */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 65px;
+    height: 65px;
+    background-color: #72C3C3 !important;
+    border: 5px solid #ffffff !important;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.carousel-control.prev {
+    left: -100px;
+}
+
+.carousel-control.next {
+    right: -100px;
+}
+
+.carousel-control:hover {
+    transform: translateY(-50%) scale(1.1);
+    filter: brightness(1.1);
+}
+
+.carousel-control svg {
+    width: 32px;
+    height: 32px;
+}
+
+.carousel-control svg path {
+    fill: white !important;
+}
+
+/* Responsive logic */
+@media (max-width: 1300px) {
+    .carousel-control.prev {
+        left: -30px;
+    }
+
+    .carousel-control.next {
+        right: -30px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .testimonial-track {
+        gap: 40px !important;
+    }
+
+    .testimonial-item {
+        flex: 0 0 calc(50% - 20px) !important;
+        width: auto !important;
+        margin-right: 0 !important;
+    }
+
+    .carousel-control {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-item {
+        flex: 0 0 100% !important;
+        margin-right: 0 !important;
+        width: auto !important;
+    }
 }
 
 .methodology-bottom-container {
@@ -304,6 +512,23 @@ nav.scrolled .logo-container div {
 .card-red {
     background-color: #d1432f;
     color: white;
+}
+
+.locations-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.locations-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+
 }
 
 #vertical-split {

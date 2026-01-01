@@ -4,7 +4,63 @@ document.addEventListener('DOMContentLoaded', () => {
     runCounters();
     setupMobileMenu();
     setupScrollNav();
+    setupTestimonialCarousel();
 });
+
+/* --- FEATURE 3: TESTIMONIAL CAROUSEL --- */
+function setupTestimonialCarousel() {
+    const track = document.querySelector('.testimonial-track');
+    const nextBtn = document.getElementById('test-next');
+    const prevBtn = document.getElementById('test-prev');
+    const items = document.querySelectorAll('.testimonial-item');
+
+    if (!track || !nextBtn || !prevBtn) return;
+
+    let currentIndex = 0;
+
+    function updateCarousel() {
+        if (items.length === 0) return;
+
+        // Calculate how many items are visible based on screen size
+        const itemsToShow = window.innerWidth > 1100 ? 3 : (window.innerWidth > 768 ? 2 : 1);
+        const maxIndex = items.length - itemsToShow;
+
+        // Clamp current index
+        currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
+
+        // Use pixels for exact movement with the fixed widths and margins
+        const itemWidth = 300; // Matches CSS flex-basis
+        const gapSize = 60; // Matches CSS margin-right
+
+        const scrollAmount = currentIndex * (itemWidth + gapSize);
+        track.style.transform = `translateX(-${scrollAmount}px)`;
+
+        // Update button states
+        prevBtn.style.opacity = currentIndex === 0 ? '0.3' : '1';
+        nextBtn.style.opacity = currentIndex >= maxIndex ? '0.3' : '1';
+        prevBtn.style.pointerEvents = currentIndex === 0 ? 'none' : 'auto';
+        nextBtn.style.pointerEvents = currentIndex >= maxIndex ? 'none' : 'auto';
+    }
+
+    nextBtn.addEventListener('click', () => {
+        const itemsToShow = window.innerWidth > 1100 ? 3 : (window.innerWidth > 768 ? 2 : 1);
+        const maxIndex = items.length - itemsToShow;
+        if (currentIndex < maxIndex) {
+            currentIndex++;
+            updateCarousel();
+        }
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+        }
+    });
+
+    // Handle window resize to keep items aligned
+    window.addEventListener('resize', updateCarousel);
+}
 
 /* --- FEATURE -1: SMART NAVBAR --- */
 function setupScrollNav() {
