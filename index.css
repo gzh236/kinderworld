@@ -198,7 +198,8 @@ nav.scrolled .logo-container div {
     padding: 40px 5%;
 }
 
-#methodology-section {
+#methodology-section,
+#locations-section {
     padding: 6rem 5% 10rem 5%;
     /* Extra bottom padding for the cuties */
     display: flex;
