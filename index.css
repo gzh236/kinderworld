@@ -72,7 +72,7 @@ nav.scrolled .nav-links li a {
 }
 
 .nav-links li a:hover {
-    color: #ffd700;
+    color: #212374;
 }
 
 nav.scrolled .nav-links li a:hover {
@@ -143,6 +143,12 @@ nav.scrolled .nav-links li a:hover {
     font-style: normal;
 }
 
+.lora-thin {
+    font-family: 'Lora', serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
 .white {
     color: white;
 }
@@ -199,7 +205,9 @@ nav.scrolled .logo-container div {
 }
 
 #methodology-section,
-#locations-section {
+#locations-section,
+#about-purpose,
+#about-trust {
     padding: 6rem 5% 10rem 5%;
     /* Extra bottom padding for the cuties */
     display: flex;
@@ -239,6 +247,297 @@ nav.scrolled .logo-container div {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* --- ABOUT US SECTIONS --- */
+#about-hero {
+    height: 85vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+#about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    /* Soft overlay for text readability */
+}
+
+#about-hero .hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 900px;
+    padding: 0 5%;
+    text-align: start;
+}
+
+#about-hero h1 {
+    font-size: 3rem;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    line-height: 1.1;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Purpose & Vision Blobs */
+#about-purpose {
+    background-color: #fcf3e0;
+    padding: 120px 5%;
+    position: relative;
+    overflow: hidden;
+}
+
+#about-purpose h2 {
+    font-size: 3.5rem;
+    color: #212374;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 80px auto;
+    line-height: 1.2;
+    font-family: 'Lora', serif;
+}
+
+.blob-container {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blob-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.purpose-blob,
+.vision-blob {
+    width: 450px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 3rem;
+    transition: transform 0.4s ease;
+    position: relative;
+}
+
+.purpose-blob:hover,
+.vision-blob:hover {
+    transform: scale(1.05);
+}
+
+.purpose-blob {
+    background-color: #d1432f;
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+}
+
+.vision-blob {
+    background-color: #72C3C3;
+    border-radius: 50% 50% 33% 67% / 55% 55% 45% 45%;
+}
+
+.purpose-blob h3,
+.vision-blob h3 {
+    font-family: 'Caprasimo', cursive;
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    text-decoration: underline dotted white 3px;
+    text-underline-offset: 10px;
+}
+
+.purpose-blob p,
+.vision-blob p {
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+
+/* Why Trust Section */
+#about-trust {
+    padding: 120px 5%;
+    background-color: white;
+}
+
+#about-trust h2 {
+    font-size: 3.5rem;
+    color: #212374;
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Caprasimo', cursive;
+}
+
+#about-trust p.intro-text {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #212374;
+    max-width: 700px;
+    margin: 0 auto 80px auto;
+    opacity: 0.8;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trust-card.navy,
+.trust-card.teal {
+    grid-row: span 2;
+    height: 100%;
+}
+
+.trust-card.navy img,
+.trust-card.teal img {
+    height: 50% !important;
+    /* Forces 50/50 split for tall cards */
+    min-height: unset;
+}
+
+.trust-card.navy .card-body,
+.trust-card.teal .card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Aligns headlines to same starting height */
+    padding-top: 4rem;
+    /* Balanced spacing from top of text area */
+}
+
+.trust-card {
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.trust-card img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.trust-card .card-body {
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    color: white;
+    flex-grow: 1;
+}
+
+.trust-card.navy .card-body {
+    background-color: #212374;
+}
+
+.trust-card.teal .card-body {
+    background-color: #72C3C3;
+}
+
+.trust-card.red .card-body {
+    background-color: #d1432f;
+}
+
+.trust-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.trust-card p {
+    font-size: 1rem;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.trust-large-img {
+    border-radius: 40px;
+    overflow: hidden;
+    flex-grow: 1;
+    /* Stretches to match column height */
+    min-height: 300px;
+}
+
+.trust-large-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Director's Message */
+#about-message {
+    padding: 100px 5%;
+    text-align: center;
+    background-color: #fcf3e0;
+}
+
+.message-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    padding: 60px;
+    border-radius: 60px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+#about-message h2 {
+    font-family: 'Caprasimo', cursive;
+    color: #212374;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.quote-mark {
+    font-size: 5rem;
+    color: #72C3C3;
+    font-family: 'Caprasimo', cursive;
+    line-height: 0;
+    display: block;
+    margin-bottom: 20px;
+}
+
+#about-message p {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: #212374;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.director-info {
+    font-family: 'Lora', serif;
+}
+
+.director-info .name {
+    font-weight: 700;
+    font-size: 1.3rem;
+    display: block;
+}
+
+.director-info .role {
+    opacity: 0.7;
+    font-size: 1.1rem;
+}
+
 #testimonials-section {
     padding: 100px 0 20px 0;
     /* Reduced bottom padding */
@@ -256,6 +555,12 @@ nav.scrolled .logo-container div {
     margin-bottom: 70px;
     text-align: center;
     font-family: 'Caprasimo', cursive;
+}
+
+#contact-section {
+    background-image: url('assets/counter_cover.png');
+    background-size: cover;
+    background-position: center;
 }
 
 /* Rigid Container */
@@ -866,4 +1171,79 @@ nav.scrolled .logo-container div {
 .flower-img {
     height: 80px;
     width: auto;
+}
+
+/* Curriculum Section Styles */
+#curriculum-section {
+    padding: 0;
+    overflow: hidden;
+}
+
+#curriculum-cover {
+    position: relative;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#curriculum-cover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    transition: transform 0.8s ease;
+}
+
+#curriculum-cover:hover img {
+    transform: scale(1.05);
+}
+
+#curriculum-cover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+#curriculum-cover h2 {
+    position: relative;
+    z-index: 3;
+    color: white;
+    font-size: 4rem;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    font-weight: 700;
+}
+
+#curriculum-content {
+    background-color: #f7f9fa;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+#curriculum-content p {
+    font-size: 1.8rem;
+    color: #212374;
+    max-width: 900px;
+    margin: 0 auto;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    #curriculum-cover h2 {
+        font-size: 2.5rem;
+    }
+
+    #curriculum-content p {
+        font-size: 1.4rem;
+    }
 }
