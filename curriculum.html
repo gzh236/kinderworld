@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Curriculum - Kinderworld</title>
+    <link rel="icon" type="image/png" href="assets/logos/kinderworld_logo.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="logo-container">
+            <a href="index.html"
+                style="display: flex; align-items: center; text-align: center; text-decoration: none; color: inherit;">
+                <img src="assets/logos/kinderworld_logo.png" alt="Kinderworld Montessori Logo" />
+                <div class="lora-regular">Kinderworld Montessori</div>
+            </a>
+        </div>
+
+        <!-- Hamburger Menu Button -->
+        <button class="menu-toggle" id="mobile-menu-btn" aria-label="Toggle Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links">
+            <li class="lora-regular"><a href="about.html">About Us</a></li>
+            <li class="lora-regular"><a href="curriculum.html" class="active">Our Curriculum</a></li>
+            <li class="lora-regular"><a href="index.html#locations-section">Our Centres</a></li>
+            <li class="lora-regular"><button class="register-btn">Register Now</button></li>
+        </ul>
+    </nav>
+    <div class="menu-backdrop" id="menu-backdrop"></div>
+
+    <section id="curriculum-section">
+        <div id="curriculum-cover">
+            <img src="assets/Banner Picture.png" alt="Our Curriculum Cover">
+            <h2 class="lora-thin">Our Curriculum</h2>
+        </div>
+        <div id="curriculum-content">
+            <p class="lora-regular">A Montessori-inspired foundation, strengthened with future skills to help children
+                think, create, and thrive.</p>
+        </div>
+
+        <section id="curriculum-learnings">
+            <h1 class="lora-regular">What Children Learn</h1>
+            <h3 class="lora-thin">Montessori Core Areas + Modern World Competencies, taught through play and purpose.
+            </h3>
+            <div id="learnings">
+                <img src="assets/practical_life.png" alt="Practical Life">
+                <img src="assets/sensorial.png" alt="Sensorial">
+                <img src="assets/lang_literacy.png" alt="Language & Literacy">
+                <img src="assets/mandarin.png" alt="Mandarin">
+                <img src="assets/math.png" alt="Mathematics">
+                <img src="assets/geography.png" alt="Geography">
+                <img src="assets/biology.png" alt="Biology">
+                <img src="assets/character_building.png" alt="Character Building">
+                <img src="assets/arts.png" alt="Music & Arts">
+            </div>
+        </section>
+
+        <section id="curriculum-carousell">
+            <h1 class='lora-regular'>Explore our Classes</h1>
+            <div class="carousel-container">
+                <button class="carousel-control prev" id="test-prev" aria-label="Previous Program">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="white" />
+                    </svg>
+                </button>
+
+                <div class="testimonial-viewport">
+                    <div class="testimonial-track">
+                        <!-- Card 1 -->
+                        <div class="testimonial-item">
+                            <div class="curriculum-card test-green">
+                                <img src="assets/Toddler A.png" alt="Infant Community" class="curriculum-card-img">
+                                <div class="curriculum-card-content">
+                                    <h3 class="lora-regular">Toddler A<br><span>(18 months - 2 years)</span></h3>
+                                    <p class="lora-regular">A gentle space for first steps toward independence and
+                                        sensory discovery. We focus on building the "I can do it myself" confidence.</p>
+                                </div>
+                            </div>
+                            <div class="card-shadow"></div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="testimonial-item">
+                            <div class="curriculum-card test-blue">
+                                <img src="assets/Toddler B.png" alt="Casa dei Bambini" class="curriculum-card-img">
+                                <div class="curriculum-card-content">
+                                    <h3 class="lora-regular">Toddler B<br><span>(2 - 3 years)</span></h3>
+                                    <p class="lora-regular">Developing communication, coordination, and self-confidence.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-shadow"></div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="testimonial-item">
+                            <div class="curriculum-card test-teal">
+                                <img src="assets/Pre-K.jpg" alt="Pre K - Kinderworld Montessori"
+                                    class="curriculum-card-img">
+                                <div class="curriculum-card-content">
+                                    <h3 class="lora-regular">Pre K<br><span>(3 - 4 years)</span></h3>
+                                    <p class="lora-regular">Igniting curiosity through concentrated work and hands-on
+                                        discovery. This is where natural play turns into a lifelong love for learning.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-shadow"></div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="testimonial-item">
+                            <div class="curriculum-card test-green">
+                                <img src="assets/K-1.png" alt="K1 - Kinderworld Montessori" class="curriculum-card-img">
+                                <div class="curriculum-card-content">
+                                    <h3 class="lora-regular">K1<br><span>(4 - 5 years)</span></h3>
+                                    <p class="lora-regular">Building strong foundations in literacy and logic through
+                                        concrete Montessori materials. We bridge the gap from tactile exploration to
+                                        abstract thinking.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-shadow"></div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="testimonial-item">
+                            <div class="curriculum-card test-teal">
+                                <img src="assets/K2.png" alt="K2 - Kinderworld Montessori" class="curriculum-card-img">
+                                <div class="curriculum-card-content">
+                                    <h3 class="lora-regular">K2<br><span>(5 - 6 years)</span></h3>
+                                    <p class="lora-regular">Empowering confident leaders ready for primary school with
+                                        academic mastery and self-discipline.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="card-shadow"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="carousel-control next" id="test-next" aria-label="Next Program">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="white" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+    </section>
+
+
+    <section id="contact-section" class="section-padding">
+        <div class="text-center">
+            <h3 class="lora-regular">Ready to give your child the best start in life?</h3>
+            <button class="register-btn lora-regular">Register Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <div id="footer-wrapper">
+            <h4 class="footer-text">Kinderworld Montessori</h4>
+            <h5 class="footer-text">Yayasan Putra Putri Bangsa</h5>
+            <h6 class="footer-text">© 2025 Yayasan Putra Putri Bangsa. All Right Reserved.</h6>
+            <a target="_blank" href="https://www.instagram.com/kinderworld.bsd/?hl=en">
+                <img class="footer-icon" src="assets/logos/instagram_logo.png" alt="Instagram Kinderworld Montessori">
+            </a>
+            <section id="footer-cuties">
+                <img src="assets/footer_cuties.png" alt="Cute Monsters Kinderworld Montessori">
+            </section>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

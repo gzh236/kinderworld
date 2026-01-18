@@ -618,6 +618,7 @@ nav.scrolled .logo-container div {
 }
 
 /* The Card itself */
+/* The Card itself - Testimonials (Restored) */
 .test-card {
     width: 100%;
     min-height: 420px;
@@ -633,6 +634,41 @@ nav.scrolled .logo-container div {
     z-index: 2;
 }
 
+/* The Card itself - Curriculum (New) */
+.curriculum-card {
+    width: 100%;
+    height: 600px;
+    padding: 0;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    color: white;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.curriculum-card-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 4px solid rgba(255, 255, 255, 0.2);
+}
+
+.curriculum-card-content {
+    flex: 1;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
 .test-green {
     background-color: #10B981 !important;
 }
@@ -645,14 +681,16 @@ nav.scrolled .logo-container div {
     background-color: #93C5FD !important;
 }
 
-.test-card h3 {
+.test-card h3,
+.curriculum-card h3 {
     font-size: 1.85rem;
     margin-bottom: 2rem;
     font-weight: 700;
     line-height: 1.2;
 }
 
-.test-card h3 span {
+.test-card h3 span,
+.curriculum-card h3 span {
     display: block;
     font-size: 1.4rem;
     font-weight: 400;
@@ -660,7 +698,8 @@ nav.scrolled .logo-container div {
     margin-top: 10px;
 }
 
-.test-card p {
+.test-card p,
+.curriculum-card p {
     font-size: 1.15rem;
     line-height: 1.7;
     margin: 0;
@@ -746,10 +785,45 @@ nav.scrolled .logo-container div {
 }
 
 @media (max-width: 768px) {
+    .testimonial-viewport {
+        overflow: hidden !important;
+        padding-bottom: 20px;
+    }
+
+    .testimonial-track {
+        flex-direction: row;
+        gap: 20px;
+        /* Use flex gap for spacing on mobile */
+    }
+
     .testimonial-item {
         flex: 0 0 100% !important;
         margin-right: 0 !important;
-        width: auto !important;
+        width: 100% !important;
+        margin-bottom: 0;
+        padding: 0;
+        /* Remove padding to simplify width calc */
+    }
+
+    .curriculum-card {
+        height: auto !important;
+        padding-bottom: 2rem;
+    }
+
+    /* Force button visibility on mobile */
+    .carousel-control {
+        display: flex !important;
+        width: 45px;
+        height: 45px;
+        background-color: rgba(114, 195, 195, 0.9) !important;
+    }
+
+    .carousel-control.prev {
+        left: 0;
+    }
+
+    .carousel-control.next {
+        right: 0;
     }
 }
 
@@ -1208,8 +1282,9 @@ nav.scrolled .logo-container div {
     height: 60vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     overflow: hidden;
+    padding: 0 5%;
 }
 
 #curriculum-cover img {
@@ -1221,6 +1296,14 @@ nav.scrolled .logo-container div {
     object-fit: cover;
     z-index: 1;
     transition: transform 0.8s ease;
+}
+
+#curriculum-learnings h1,
+#curriculum-learnings h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #212374
 }
 
 #curriculum-cover:hover img {
@@ -1248,9 +1331,13 @@ nav.scrolled .logo-container div {
 }
 
 #curriculum-content {
-    background-color: #f7f9fa;
     padding: 80px 5%;
     text-align: center;
+    background-image: url("assets/counter_cover.png")
+}
+
+#curriculum-learnings {
+    background-color: #fcf3e0;
 }
 
 #curriculum-content p {
@@ -1260,6 +1347,16 @@ nav.scrolled .logo-container div {
     margin: 0 auto;
     line-height: 1.5;
     font-weight: 500;
+}
+
+#curriculum-carousell {
+    background-image: url("assets/counter_cover.png");
+}
+
+#curriculum-carousell h1 {
+    display: flex;
+    justify-content: center;
+    color: #212374
 }
 
 @media (max-width: 768px) {
@@ -1420,5 +1517,64 @@ nav.scrolled .logo-container div {
         padding-bottom: 0 !important;
         gap: 1rem;
         /* Reduce gap */
+    }
+}
+
+/* Fix for Curriculum Carousel skew on larger screens */
+#curriculum-carousell .testimonial-item {
+    flex: 0 0 calc(50% - 30px) !important;
+    width: calc(50% - 30px) !important;
+    margin-right: 60px !important;
+}
+
+@media (max-width: 1100px) {
+    #curriculum-carousell .testimonial-item {
+        flex: 0 0 calc(50% - 20px) !important;
+        width: auto !important;
+        margin-right: 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #curriculum-carousell .testimonial-item {
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+}
+
+/* Learning Grid Section */
+#learnings {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto 60px auto;
+}
+
+#learnings img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease;
+}
+
+#learnings img:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 900px) {
+    #learnings {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 40px 5%;
+    }
+}
+
+@media (max-width: 600px) {
+    #learnings {
+        grid-template-columns: 1fr;
     }
 }

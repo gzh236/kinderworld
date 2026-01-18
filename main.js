@@ -22,15 +22,24 @@ function setupTestimonialCarousel() {
         if (items.length === 0) return;
 
         // Calculate how many items are visible based on screen size
-        const itemsToShow = window.innerWidth > 1100 ? 3 : (window.innerWidth > 768 ? 2 : 1);
+        // User requested 2 cards on larger screens
+        const itemsToShow = window.innerWidth > 768 ? 2 : 1;
         const maxIndex = items.length - itemsToShow;
 
         // Clamp current index
         currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
 
-        // Use pixels for exact movement with the fixed widths and margins
-        const itemWidth = 300; // Matches CSS flex-basis
-        const gapSize = 60; // Matches CSS margin-right
+        // Dynamically measure width and gap
+        const firstItem = items[0];
+        const itemStyle = window.getComputedStyle(firstItem);
+        const trackStyle = window.getComputedStyle(track);
+
+        const itemWidth = firstItem.offsetWidth;
+        const marginGap = parseFloat(itemStyle.marginRight) || 0;
+        const flexGap = parseFloat(trackStyle.columnGap) || parseFloat(trackStyle.gap) || 0;
+
+        // Use whichever gap is active (margin logic or flex gap logic)
+        const gapSize = marginGap + flexGap;
 
         const scrollAmount = currentIndex * (itemWidth + gapSize);
         track.style.transform = `translateX(-${scrollAmount}px)`;
