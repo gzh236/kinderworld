@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
         rel="stylesheet">
 </head>
 
@@ -19,7 +19,7 @@
         <div class="logo-container">
             <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
                 <img src="assets/logos/kinderworld_logo.png" alt="Kinderworld Montessori Logo" />
-                <div class="lora-regular">Kinderworld Montessori</div>
+                <div class="dm-sans-regular">Kinderworld Montessori</div>
             </a>
         </div>
 
@@ -31,10 +31,11 @@
         </button>
 
         <ul class="nav-links">
-            <li class="lora-regular"><a href="about.html" class="active">About Us</a></li>
-            <li class="lora-regular"><a href="curriculum.html">Our Curriculum</a></li>
-            <li class="lora-regular"><a href="index.html#locations-section">Our Centres</a></li>
-            <li class="lora-regular"><button class="register-btn">Register Now</button></li>
+            <li class="dm-sans-regular"><a href="about.html" class="active">About Us</a></li>
+            <li class="dm-sans-regular"><a href="curriculum.html">Our Curriculum</a></li>
+
+            <li class="dm-sans-regular"><a class="register-btn" href="https://forms.gle/kEAtJztNpsxJoqnh9"
+                    target="_blank" style="text-decoration: none; display: inline-block;">Register Now</a></li>
         </ul>
     </nav>
     <div class="menu-backdrop" id="menu-backdrop"></div>
@@ -43,26 +44,32 @@
     <section id="about">
         <div id="about-hero" style="background-image: url('assets/montessori_button.jpg');">
             <div class="hero-content">
-                <h1 class="lora-thin" style="color: white;">25 years of excellence.<br>One Focus: Your Child</h1>
+                <h1 class="dm-sans-thin" style="color: white;">25 years of excellence.<br>One Focus: Your Child</h1>
             </div>
         </div>
 
         <!-- Purpose & Vision -->
         <div id="about-purpose">
-            <h2 class="lora-regular">We don't just prepare children for Primary School, <br><strong>We prepare them for
+            <h2 class="dm-sans-regular">We don't just prepare children for Primary School, <br><strong>We prepare them
+                    for
                     life.</strong></h2>
             <div class="blob-container mobile-only">
-                <div class="purpose-blob">
-                    <h3>Our Purpose</h3>
-                    <p>To create a nurturing space where children can become the best versions of themselves.</p>
-                </div>
-                <div class="vision-blob">
-                    <h3>Our Vision</h3>
-                    <p>To inspire discovery and lifelong learning through the Montessori method of education.</p>
-                </div>
+                <img src="assets/purpose_cropped.png" alt="Our Purpose" class="purpose-mobile-img">
+                <img src="assets/vision.png" alt="Our Vision" class="vision-mobile-img">
             </div>
             <div class="desktop-only" style="text-align: center;">
                 <img src="assets/purpose.png" alt="Purpose & Vision of Kinderworld Montessori" />
+            </div>
+            <div class="methodology-bottom-container">
+                <!-- Wrapper for absolute positioning -->
+                <div class="about-cuties-wrapper">
+                    <section id="about-us-bottom-left">
+                        <img src="assets/about_us_cuties1.png" alt="cute, happy, kinderworld" />
+                    </section>
+                    <section id="about-us-bottom-right">
+                        <img src="assets/about_us_cuties2.png" alt="cute, happy, kinderworld" />
+                    </section>
+                </div>
             </div>
         </div>
 
@@ -72,25 +79,11 @@
             <p class="intro-text">Families trust Kinderworld because of our nurturing environment and proven Montessori
                 methodology.</p>
             <div class="trust-grid mobile-only">
-                <!-- Card 1: Educators -->
-                <div class="trust-card navy">
-                    <div class="card-body">
-                        <h3>Our Educators</h3>
-                        <p>Compassionate guides who nurture every child's unique potential with patience and expertise.
-                        </p>
-                    </div>
-                </div>
+
                 <div class="trust-large-img">
                     <img src="assets/who_we_are.png" alt="Happy Kinderworld Students">
                 </div>
-                <!-- Card 2: Methodology -->
-                <div class="trust-card teal">
-                    <div class="card-body">
-                        <h3>Montessori Method</h3>
-                        <p>A child-centered approach that fosters independence, creativity, and a lifelong love for
-                            learning.</p>
-                    </div>
-                </div>
+
             </div>
             <div class="desktop-only" style="text-align: center; margin-top: 40px;">
                 <img src="assets/who_we_are.png" alt="Why Kinderworld" />
@@ -99,21 +92,11 @@
 
         <!-- Director's Message -->
         <div id="about-message">
-            <div class="message-container">
-                <span class="quote-mark">“</span>
-                <h2>A Message from our Director</h2>
-                <p>
-                    For over 25 years, our mission has remained the same: to create a nurturing space where children can
-                    become the best versions of themselves. At Kinderworld, we don't just teach—we inspire discovery.
-                </p>
-                <div class="director-info">
-                    <span class="name">Our Founding Director</span>
-                    <span class="role">Kinderworld Montessori</span>
-                </div>
-            </div>
-            <button style="margin-top: 3rem" id="view-curriculum-btn" class="register-btn lora-regular">Register
-                Now</button>
-
+            <h2>Is Kinderworld the right fit for your child?</h3>
+                <p>Experience our environment firsthand.</p>
+                <a id="view-curriculum-btn" class="register-btn dm-sans-thin" href="https://wa.me/6281317444851"
+                    target="_blank" style="margin-top: 1rem; text-decoration: none; display: inline-block;">Contact
+                    Us</a>
         </div>
     </section>
 
@@ -122,14 +105,32 @@
             <h4 class="footer-text">Kinderworld Montessori</h4>
             <h5 class="footer-text">Yayasan Putra Putri Bangsa</h5>
             <h6 class="footer-text">© 2025 Yayasan Putra Putri Bangsa. All Right Reserved.</h6>
-            <a target="_blank" href="https://www.instagram.com/kinderworld.bsd/?hl=en">
-                <img class="footer-icon" src="assets/logos/instagram_logo.png" alt="Instagram Kinderworld Montessori">
-            </a>
+
+            <div class="social-wrapper">
+                <div class="social-menu">
+                    <a href="https://www.instagram.com/kinderworld.bsd?igsh=NWplNjIzM3pybG9q" target="_blank">BSD
+                        Campus</a>
+                    <a href="https://www.instagram.com/kinderworldmontessoripreschool?igsh=MTQ1azNvOGx6enV0aw=="
+                        target="_blank">Puri Indah Campus</a>
+                </div>
+                <a href="javascript:void(0)" class="instagram-trigger">
+                    <img class="footer-icon" src="assets/logos/instagram_logo.png"
+                        alt="Instagram Kinderworld Montessori">
+                </a>
+            </div>
+
             <section id="footer-cuties">
                 <img src="assets/footer_cuties.png" alt="Cute Monsters Kinderworld Montessori">
             </section>
         </div>
     </footer>
+    <a href="https://wa.me/6281317444851" class="whatsapp-float" target="_blank">
+        <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+            <path fill="currentColor"
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-4-10.5-6.7z" />
+        </svg>
+    </a>
     <script src="main.js"></script>
 </body>
 

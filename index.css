@@ -19,9 +19,16 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Lora', serif;
+    font-family: 'DM Sans', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: 'DM Sans', sans-serif;
 }
 
 nav {
@@ -95,13 +102,13 @@ nav.scrolled .nav-links li a:hover {
 }
 
 .register-btn {
-    background: var(--button-gradient);
+    background: #212374;
     color: white !important;
     border: none;
     padding: 0.8rem 1.8rem;
     border-radius: 50px;
     font-weight: 600;
-    font-family: 'Lora', serif;
+    font-family: 'DM Sans', sans-serif;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -156,15 +163,9 @@ nav.scrolled .menu-toggle span {
     z-index: 1500;
 }
 
-.lora-regular {
-    font-family: 'Lora', serif;
+.dm-sans-regular {
+    font-family: 'DM Sans', sans-serif;
     font-weight: 400;
-    font-style: normal;
-}
-
-.lora-thin {
-    font-family: 'Lora', serif;
-    font-weight: 200;
     font-style: normal;
 }
 
@@ -186,8 +187,8 @@ nav.scrolled .menu-toggle span {
 }
 
 .logo-container div {
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    font-weight: 500;
     color: white;
     transition: color 0.3s ease;
 }
@@ -203,20 +204,26 @@ nav.scrolled .logo-container div {
 }
 
 .mission-statement {
-    font-family: 'Caprasimo', cursive;
     font-size: 4rem;
-    line-height: 1.1;
+    line-height: 1.2;
     color: #ffffff;
+    margin: 0;
+}
+
+.dm-sans-thin {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
 }
 
 .text-center {
     text-align: center;
 }
 
-.caprasimo {
-    font-family: 'Caprasimo', cursive;
+.dm-sans-display {
+    font-family: 'DM Sans', sans-serif;
     color: #212374;
-    font-size: 3.5rem;
+    font-size: 2.2rem;
+    font-weight: 700;
 }
 
 .section-padding {
@@ -227,7 +234,7 @@ nav.scrolled .logo-container div {
 #locations-section,
 #about-purpose,
 #about-trust {
-    padding: 6rem 5% 10rem 5%;
+    padding: 3rem 5% 6rem 5%;
     /* Extra bottom padding for the cuties */
     display: flex;
     flex-direction: column;
@@ -241,14 +248,15 @@ nav.scrolled .logo-container div {
 }
 
 #methodology-section h1 {
-    font-family: 'Caprasimo', cursive;
-    font-size: 3rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
     color: #212374;
     margin-bottom: 1rem;
 }
 
 #methodology-section h4 {
-    font-family: 'Lora', serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 400;
     max-width: 800px;
     line-height: 1.6;
@@ -257,8 +265,8 @@ nav.scrolled .logo-container div {
 }
 
 #view-curriculum-btn {
-    background: #ffffff !important;
-    color: #212374 !important;
+    background: #212374 !important;
+    color: #ffffff !important;
     font-weight: 700;
     font-size: 1.1rem;
     border: 2px solid #212374;
@@ -300,8 +308,7 @@ nav.scrolled .logo-container div {
 
 #about-hero h1 {
     font-size: 3rem;
-    font-family: 'Lora', serif;
-    font-weight: 700;
+    font-family: 'DM Sans', sans-serif;
     line-height: 1.1;
     text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
@@ -309,19 +316,20 @@ nav.scrolled .logo-container div {
 /* Purpose & Vision Blobs */
 #about-purpose {
     background-color: #fcf3e0;
-    padding: 120px 5%;
+    padding: 60px 5%;
     position: relative;
     overflow: hidden;
 }
 
 #about-purpose h2 {
-    font-size: 3.5rem;
+    font-size: 2.2rem;
+    font-weight: 400;
     color: #212374;
     text-align: center;
     max-width: 800px;
-    margin: 0 auto 80px auto;
+    margin: 0 auto 40px auto;
     line-height: 1.2;
-    font-family: 'Lora', serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .blob-container {
@@ -340,63 +348,23 @@ nav.scrolled .logo-container div {
     border-radius: 20px;
 }
 
-.purpose-blob,
-.vision-blob {
-    width: 450px;
-    height: 450px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 3rem;
-    transition: transform 0.4s ease;
-    position: relative;
-}
-
-.purpose-blob:hover,
-.vision-blob:hover {
-    transform: scale(1.05);
-}
-
-.purpose-blob {
-    background-color: #d1432f;
-    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
-}
-
-.vision-blob {
-    background-color: #72C3C3;
-    border-radius: 50% 50% 33% 67% / 55% 55% 45% 45%;
-}
-
-.purpose-blob h3,
-.vision-blob h3 {
-    font-family: 'Caprasimo', cursive;
-    font-size: 2.8rem;
-    margin-bottom: 20px;
-    text-decoration: underline dotted white 3px;
-    text-underline-offset: 10px;
-}
-
-.purpose-blob p,
-.vision-blob p {
-    font-size: 1.4rem;
-    line-height: 1.5;
-}
+/* .purpose-blob and .vision-blob styles removed */
+/* .purpose-blob and .vision-blob specific styles removed */
+/* Cleaned */
 
 /* Why Trust Section */
 #about-trust {
-    padding: 120px 5%;
+    padding: 40px 5%;
     background-color: white;
 }
 
 #about-trust h2 {
-    font-size: 3.5rem;
+    font-size: 2.2rem;
+    font-weight: 700;
     color: #212374;
     text-align: center;
     margin-bottom: 20px;
-    font-family: 'Caprasimo', cursive;
+    font-family: 'DM Sans', sans-serif;
 }
 
 #about-trust p.intro-text {
@@ -404,7 +372,7 @@ nav.scrolled .logo-container div {
     font-size: 1.4rem;
     color: #212374;
     max-width: 700px;
-    margin: 0 auto 80px auto;
+    margin: 0 auto 40px auto;
     opacity: 0.8;
 }
 
@@ -503,7 +471,7 @@ nav.scrolled .logo-container div {
 
 /* Director's Message */
 #about-message {
-    padding: 100px 5%;
+    padding: 30px 5%;
     text-align: center;
     background-color: #fcf3e0;
 }
@@ -519,16 +487,17 @@ nav.scrolled .logo-container div {
 }
 
 #about-message h2 {
-    font-family: 'Caprasimo', cursive;
+    font-family: 'DM Sans', sans-serif;
     color: #212374;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    font-weight: 700;
     margin-bottom: 30px;
 }
 
 .quote-mark {
     font-size: 5rem;
     color: #72C3C3;
-    font-family: 'Caprasimo', cursive;
+    font-family: 'DM Sans', sans-serif;
     line-height: 0;
     display: block;
     margin-bottom: 20px;
@@ -543,7 +512,7 @@ nav.scrolled .logo-container div {
 }
 
 .director-info {
-    font-family: 'Lora', serif;
+    font-family: 'DM Sans', sans-serif;
 }
 
 .director-info .name {
@@ -558,7 +527,7 @@ nav.scrolled .logo-container div {
 }
 
 #testimonials-section {
-    padding: 100px 0 20px 0;
+    padding: 30px 0 20px 0;
     /* Reduced bottom padding */
     background-image: url('assets/counter_cover.png');
     background-size: cover;
@@ -569,11 +538,12 @@ nav.scrolled .logo-container div {
 }
 
 #testimonials-section h1 {
-    font-size: 3.5rem;
+    font-size: 2.2rem;
+    font-weight: 700;
     color: #212374;
     margin-bottom: 70px;
     text-align: center;
-    font-family: 'Caprasimo', cursive;
+    font-family: 'DM Sans', sans-serif;
 }
 
 #contact-section {
@@ -596,6 +566,8 @@ nav.scrolled .logo-container div {
     width: 100%;
     overflow: hidden;
     padding: 20px 0 100px 0;
+    transition: height 0.3s ease;
+    /* For adaptive height */
     /* Tightened shadow space */
 }
 
@@ -606,8 +578,8 @@ nav.scrolled .logo-container div {
 }
 
 .testimonial-item {
-    flex: 0 0 300px !important;
-    width: 300px !important;
+    flex: 0 0 500px !important;
+    width: 500px !important;
     margin-right: 60px !important;
     /* Spacious gap from reference */
     display: flex;
@@ -621,9 +593,10 @@ nav.scrolled .logo-container div {
 /* The Card itself - Testimonials (Restored) */
 .test-card {
     width: 100%;
-    min-height: 420px;
-    padding: 4rem 2.8rem;
-    border-radius: 50px;
+    min-height: 300px;
+    height: 100%;
+    padding: 2.5rem 2rem;
+    border-radius: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -700,8 +673,8 @@ nav.scrolled .logo-container div {
 
 .test-card p,
 .curriculum-card p {
-    font-size: 1.15rem;
-    line-height: 1.7;
+    font-size: 1.1rem;
+    line-height: 1.6;
     margin: 0;
 }
 
@@ -805,6 +778,13 @@ nav.scrolled .logo-container div {
         /* Remove padding to simplify width calc */
     }
 
+    /* Allow cards to fit content naturally on mobile */
+    .test-card {
+        height: auto !important;
+        min-height: unset !important;
+        padding: 2rem;
+    }
+
     .curriculum-card {
         height: auto !important;
         padding-bottom: 2rem;
@@ -886,7 +866,7 @@ nav.scrolled .logo-container div {
 }
 
 .card-text h3 {
-    font-family: 'Lora', serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     font-size: 2rem;
     line-height: 1.2;
@@ -913,6 +893,10 @@ nav.scrolled .logo-container div {
     color: white;
 }
 
+#locations-section {
+    padding: 2rem 5%;
+}
+
 .locations-container {
     display: flex;
     flex-direction: row;
@@ -924,6 +908,19 @@ nav.scrolled .logo-container div {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    .locations-link-container {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .google-map-icon {
+        width: 20px;
+        height: auto;
+    }
+
     justify-content: center;
     text-align: center;
     padding: 1rem;
@@ -942,6 +939,21 @@ nav.scrolled .logo-container div {
 #innovative,
 #thinkers {
     color: #212374;
+}
+
+#thinkers {
+    position: relative;
+    width: fit-content;
+}
+
+.sparkle-icon {
+    position: absolute;
+    right: -130px;
+    top: 5px;
+    width: 110px;
+    height: auto;
+    pointer-events: none;
+    transform: rotate(0deg);
 }
 
 #nav-wrapper {
@@ -987,6 +999,14 @@ nav.scrolled .logo-container div {
     z-index: 1;
 }
 
+#about-us-bottom-left {
+    position: absolute;
+    bottom: -100px;
+    left: -50px;
+    line-height: 0;
+    z-index: 1;
+}
+
 #methodology-bottom-right {
     position: absolute;
     bottom: -40px;
@@ -996,15 +1016,19 @@ nav.scrolled .logo-container div {
     z-index: 1;
 }
 
-#methodology-bottom-left img,
-#methodology-bottom-right img {
-    height: 140px;
-    /* Sized similarly to footer cuties */
-    display: block;
+#about-us-bottom-right {
+    position: absolute;
+    bottom: -50px;
+    right: -30px;
+    line-height: 0;
+    z-index: 1;
 }
 
-#view-curriculum {
-    padding-top: 3rem;
+#methodology-bottom-left img,
+#methodology-bottom-right img {
+    height: 250px;
+    /* Sized similarly to footer cuties */
+    display: block;
 }
 
 .footer-text {
@@ -1027,7 +1051,7 @@ nav.scrolled .logo-container div {
     text-align: center;
     color: #1e1e50;
     /* Navy Blue */
-    font-family: 'Lora', serif;
+    font-family: 'DM Sans', sans-serif;
     font-weight: 700;
     font-size: 1.5rem;
     margin-bottom: 30px;
@@ -1040,6 +1064,7 @@ nav.scrolled .logo-container div {
     /* Ensures the row is as wide as needed */
     animation: scroll 180s linear infinite;
     /* The moving engine */
+    margin-bottom: 30px;
 }
 
 .marquee-logo {
@@ -1123,6 +1148,17 @@ nav.scrolled .logo-container div {
         font-size: 3rem;
     }
 
+    #thinkers {
+        margin: 0 auto;
+    }
+
+    .sparkle-icon {
+        width: 60px;
+        right: -70px;
+        /* Moved further right */
+        top: 0;
+    }
+
     /* Marquee */
     .marquee-section h3 {
         font-size: 1.2rem;
@@ -1135,14 +1171,8 @@ nav.scrolled .logo-container div {
         gap: 30px;
     }
 
-    .counter-item {
-        width: 280px;
-        height: 280px;
-    }
 
-    .counter-content .number {
-        font-size: 3.5rem;
-    }
+    /* Methodology */
 
     /* Methodology */
     .methodology-container {
@@ -1164,6 +1194,8 @@ nav.scrolled .logo-container div {
         font-size: 2.2rem;
         padding: 0 5%;
     }
+
+
 
     /* Footer */
     #footer-wrapper {
@@ -1243,7 +1275,7 @@ nav.scrolled .logo-container div {
 
 /* Typography */
 .counter-content .number {
-    font-family: 'Caprasimo', cursive;
+    font-family: 'DM Sans', sans-serif;
     font-size: 5rem;
     font-weight: 400;
     line-height: 1;
@@ -1251,7 +1283,7 @@ nav.scrolled .logo-container div {
 }
 
 .counter-content .label {
-    font-family: 'Lora', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.2;
@@ -1303,7 +1335,9 @@ nav.scrolled .logo-container div {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #212374
+    color: #212374;
+    font-size: 2.2rem;
+    font-weight: 700;
 }
 
 #curriculum-cover:hover img {
@@ -1323,9 +1357,10 @@ nav.scrolled .logo-container div {
 
 #curriculum-cover h2 {
     position: relative;
+    left: 100px;
     z-index: 3;
     color: white;
-    font-size: 4rem;
+    font-size: 2.2rem;
     text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
     font-weight: 700;
 }
@@ -1338,6 +1373,7 @@ nav.scrolled .logo-container div {
 
 #curriculum-learnings {
     background-color: #fcf3e0;
+    padding-top: 30px;
 }
 
 #curriculum-content p {
@@ -1356,12 +1392,22 @@ nav.scrolled .logo-container div {
 #curriculum-carousell h1 {
     display: flex;
     justify-content: center;
-    color: #212374
+    color: #212374;
+    font-size: 2.2rem;
+    font-weight: 700;
 }
 
 @media (max-width: 768px) {
+    #curriculum-cover {
+        padding-top: 80px;
+    }
+
     #curriculum-cover h2 {
         font-size: 2.5rem;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        padding: 0 1rem;
     }
 
     #curriculum-content p {
@@ -1395,9 +1441,23 @@ nav.scrolled .logo-container div {
 
     /* Purpose & Vision Blobs */
     #about-purpose {
-        padding: 40px 5%;
+        padding: 40px 5% 0 5%;
         overflow: visible;
         /* Prevent clipping */
+    }
+
+    #about-trust {
+        padding-top: 30px;
+    }
+
+    #about-trust h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    #about-trust p.intro-text {
+        font-size: 1.1rem;
+        margin-bottom: 40px;
     }
 
     #about-purpose h2 {
@@ -1411,6 +1471,13 @@ nav.scrolled .logo-container div {
         flex-direction: column;
         gap: 20px;
         margin-top: 10px;
+        overflow: visible;
+    }
+
+    .blob-container.mobile-only img {
+        border-radius: 0;
+        margin-bottom: 20px;
+        box-shadow: none;
     }
 
     .purpose-blob,
@@ -1423,30 +1490,7 @@ nav.scrolled .logo-container div {
         width: 100%;
     }
 
-    .purpose-blob {
-        background-color: #FF6B6B;
-        /* Soft Red per branding */
-    }
-
-    .vision-blob {
-        background-color: #4ECDC4;
-        /* Teal per branding */
-    }
-
-    .purpose-blob h3,
-    .vision-blob h3 {
-        font-family: 'Caprasimo', serif;
-        font-size: 1.4rem;
-        /* Reduced font size */
-        margin-bottom: 0.5rem;
-    }
-
-    .purpose-blob p,
-    .vision-blob p {
-        font-size: 1rem;
-        /* Reduced font size */
-        line-height: 1.4;
-    }
+    /* Mobile blob specific styles removed */
 
     /* Trust Section Grid */
     .trust-grid.mobile-only {
@@ -1476,7 +1520,7 @@ nav.scrolled .logo-container div {
     }
 
     .trust-card h3 {
-        font-family: 'Caprasimo', serif;
+        font-family: 'DM Sans', sans-serif;
         font-size: 1.8rem;
         margin-bottom: 1rem;
     }
@@ -1576,5 +1620,481 @@ nav.scrolled .logo-container div {
 @media (max-width: 600px) {
     #learnings {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #about-us-bottom-left,
+    #about-us-bottom-right,
+    #methodology-bottom-right,
+    #methodology-bottom-left {
+        display: none !important;
+    }
+}
+
+/* WhatsApp Floating Bubble */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background-color: #20bd5a;
+}
+
+.whatsapp-icon {
+    width: 35px;
+    height: 35px;
+    color: white;
+}
+
+/* WhatsApp Modal */
+.wa-modal {
+    display: none;
+    position: fixed;
+    z-index: 10001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+}
+
+.wa-modal.active {
+    display: flex;
+}
+
+.wa-modal-content {
+    background-color: #fcf3e0;
+    margin: auto;
+    padding: 30px;
+    border: 2px solid #212374;
+    border-radius: 30px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s;
+}
+
+.wa-modal-header {
+    font-family: 'DM Sans', sans-serif;
+    color: #212374;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.wa-close {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.wa-close:hover,
+.wa-close:focus {
+    color: #212374;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.wa-option-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: white;
+    color: #212374;
+    border: 2px solid #212374;
+    border-radius: 15px;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.wa-option-btn:hover {
+    background-color: #212374;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Shared Social Dropdown Menu */
+.social-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.social-menu {
+    display: none;
+    position: absolute;
+    top: 50%;
+    /* Center vertically relative to icon */
+    left: 100%;
+    /* Position to the right of the icon */
+    transform: translateY(-50%);
+    background-color: white;
+    min-width: 220px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 8px 0;
+    z-index: 1000;
+    margin-left: 15px;
+    /* Space between menu and icon */
+    text-align: left;
+}
+
+/* Arrow pointer (Pointing Left) */
+.social-menu::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    /* Position on left edge of menu */
+    margin-top: -8px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent white transparent transparent;
+}
+
+.social-menu a {
+    display: block;
+    padding: 12px 20px;
+    color: #212374;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: background-color 0.2s;
+    border-bottom: 1px solid #eee;
+}
+
+.social-menu a:last-child {
+    border-bottom: none;
+}
+
+.social-menu a:hover {
+    background-color: #f0f7ff;
+    color: #4a90e2;
+}
+
+/* Show menu on hover or when active class is added via JS */
+.social-wrapper:hover .social-menu,
+.social-wrapper.active .social-menu {
+    display: block;
+    animation: dropdownFade 0.2s ease-out;
+}
+
+/* Specific styling for WhatsApp Float Wrapper to open LEFT instead of RIGHT */
+/* Since it's fixed bottom-right, menus should open to the LEFT/TOP */
+.whatsapp-float-wrapper {
+    position: fixed !important;
+    bottom: 40px !important;
+    right: 40px !important;
+    z-index: 10000 !important;
+    width: 60px;
+    height: 60px;
+}
+
+/* Reset the inner bubble when wrapped */
+.whatsapp-float-wrapper .whatsapp-float {
+    position: static !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    /* Wrapper can handle shadow or keep it on element */
+}
+
+.whatsapp-float-wrapper .social-menu {
+    left: auto;
+    right: 100%;
+    /* Open to Left */
+    margin-left: 0;
+    margin-right: 15px;
+}
+
+.whatsapp-float-wrapper .social-menu::after {
+    left: 100%;
+    /* Arrow on Right side */
+    right: auto;
+    border-color: transparent transparent transparent white;
+    /* Point Right */
+}
+
+/* Animate Leftwards for WhatsApp Float */
+.whatsapp-float-wrapper:hover .social-menu,
+.whatsapp-float-wrapper.active .social-menu {
+    animation: dropdownFadeLeft 0.2s ease-out;
+}
+
+@keyframes dropdownFadeLeft {
+    from {
+        opacity: 0;
+        margin-right: 5px;
+    }
+
+    to {
+        opacity: 1;
+        margin-right: 15px;
+    }
+}
+
+
+@keyframes dropdownFade {
+    from {
+        opacity: 0;
+        margin-left: 5px;
+        /* Subtle slide effect using margin instead of transform */
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 15px;
+        /* Match the final margin-left */
+    }
+}
+
+/* Mobile: Position Below/Above to prevent overflow */
+@media (max-width: 768px) {
+    .social-menu {
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+        margin-top: 15px;
+        /* Space below icon */
+    }
+
+    /* Arrow Pointing Up */
+    .social-menu::after {
+        top: auto;
+        bottom: 100%;
+        right: auto;
+        left: 50%;
+        margin-left: -8px;
+        margin-top: 0;
+        border-color: transparent transparent white transparent;
+    }
+
+    /* Override animation for mobile to slide down */
+    .social-wrapper:hover .social-menu,
+    .social-wrapper.active .social-menu {
+        animation: dropdownFadeMobile 0.2s ease-out;
+    }
+
+    /* Logic for floating button on mobile - Open UPWARDS */
+    .whatsapp-float-wrapper .social-menu {
+        top: auto;
+        bottom: 100%;
+        margin-top: 0;
+        margin-bottom: 15px;
+        /* Space above icon */
+        right: 0;
+        left: auto;
+        transform: none;
+    }
+
+    .whatsapp-float-wrapper .social-menu::after {
+        top: 100%;
+        bottom: auto;
+        left: auto;
+        right: 20px;
+        /* Align arrow near right edge */
+        border-color: white transparent transparent transparent;
+        /* Point Down */
+    }
+
+    .whatsapp-float-wrapper:hover .social-menu,
+    .whatsapp-float-wrapper.active .social-menu {
+        animation: dropdownFadeUp 0.2s ease-out;
+    }
+}
+
+@keyframes dropdownFadeMobile {
+    from {
+        opacity: 0;
+        margin-top: 5px;
+    }
+
+    to {
+        opacity: 1;
+        margin-top: 15px;
+    }
+}
+
+@keyframes dropdownFadeUp {
+    from {
+        opacity: 0;
+        margin-bottom: 5px;
+    }
+
+    to {
+        opacity: 1;
+        margin-bottom: 15px;
+    }
+}
+
+/* Correctly placed mobile overrides for counters */
+@media (max-width: 768px) {
+    .counter-item {
+        width: 200px;
+        height: 200px;
+    }
+
+    .counter-content .number {
+        font-size: 2.5rem;
+    }
+}
+
+/* Make locations vertical on mobile */
+@media (max-width: 768px) {
+    .locations-container {
+        flex-direction: column;
+        gap: 30px;
+        /* Add some spacing between vertically stacked location cards */
+    }
+}
+
+/* Limit image width on locations for mobile */
+@media (max-width: 768px) {
+    .locations-card .card-image {
+        max-width: 300px;
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Condense methodology spacing on mobile since cuties are gone */
+@media (max-width: 768px) {
+    #methodology-section {
+        padding-bottom: 3rem !important;
+        /* Reduce from 10rem */
+    }
+
+    /* --- MOBILE CAROUSEL & LAYOUT FIXES (Consolidated) --- */
+    @media (max-width: 768px) {
+
+        /* 1. Methodology Spacing */
+        .methodology-bottom-container {
+            margin-top: 2rem;
+        }
+
+        #about-purpose .methodology-bottom-container {
+            display: none !important;
+        }
+    }
+
+    /* 2. Remove Massive Gaps in Testimonials */
+    #testimonials-section {
+        padding-bottom: 30px !important;
+        min-height: auto !important;
+    }
+
+    .testimonial-viewport {
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+        height: auto;
+        /* Let JS adaptive height work, or auto fallback */
+    }
+
+    .carousel-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    /* 3. Disable Desktop Shadows/Padding on Mobile Cards */
+    .card-shadow {
+        display: none !important;
+    }
+
+    /* Prevent Flex Stretch on Track */
+    .testimonial-track {
+        align-items: flex-start !important;
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    .testimonial-item {
+        height: auto !important;
+        flex: 0 0 100% !important;
+        width: 100% !important;
+        margin-right: 0 !important;
+    }
+
+    /* VITAL: Allow cards to shrink to content */
+    .test-card {
+        min-height: 0 !important;
+        height: auto !important;
+        padding: 2rem 1.5rem !important;
+    }
+
+    /* 4. Controls Layout (Static Flow) */
+    .carousel-navigation {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        width: 100%;
+        margin-top: 20px;
+        /* Space between card and buttons */
+        position: static !important;
+    }
+
+    .carousel-control {
+        position: static !important;
+        transform: none !important;
+        left: auto !important;
+        right: auto !important;
+        top: auto !important;
+        bottom: auto !important;
+        width: 50px;
+        height: 50px;
+        margin: 0 !important;
     }
 }

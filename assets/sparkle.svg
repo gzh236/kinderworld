@@ -1,0 +1,10 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<!-- Top line: horizontal-ish, slight tilt up -->
+<path d="M50 60 L140 35" stroke="#FCEE56" stroke-width="24" stroke-linecap="round" />
+
+<!-- Middle line: diagonal down -->
+<path d="M40 100 L130 140" stroke="#FCEE56" stroke-width="24" stroke-linecap="round" />
+
+<!-- Bottom line: almost vertical, slight tilt left -->
+<path d="M20 130 L40 190" stroke="#FCEE56" stroke-width="24" stroke-linecap="round" />
+</svg>
