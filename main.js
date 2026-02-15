@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupScrollNav();
     setupTestimonialCarousel();
     setupWhatsAppDropdowns();
+    setupCopyrightYear();
 });
 
 /* --- FEATURE 3: TESTIMONIAL CAROUSEL --- */
@@ -326,4 +327,12 @@ function setupWhatsAppDropdowns() {
     document.addEventListener('click', () => {
         wrappers.forEach(w => w.classList.remove('active'));
     });
+}
+
+/* --- GLOBAL: DYNAMIC COPYRIGHT YEAR --- */
+function setupCopyrightYear() {
+    const yearSpan = document.getElementById('copyright-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
 }

@@ -550,6 +550,12 @@ nav.scrolled .logo-container div {
     background-image: url('assets/counter_cover.png');
     background-size: cover;
     background-position: center;
+    padding: 25px 5% !important;
+}
+
+#contact-section h3 {
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
 /* Rigid Container */
