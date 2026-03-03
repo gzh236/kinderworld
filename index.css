@@ -74,8 +74,8 @@ nav.scrolled {
 }
 
 nav.scrolled .nav-links li a {
-    color: #212374;
-    /* Flips to navy blue for readability on scroll */
+    color: black;
+    /* Stays black on scroll */
 }
 
 .nav-links li a.active {
@@ -181,21 +181,26 @@ nav.scrolled .menu-toggle span {
     align-items: center;
 }
 
-.logo-container img {
-    height: 70px;
+.logo-container img.nav-logo {
+    height: 50px;
     width: auto;
+    transition: opacity 0.3s ease;
 }
 
-.logo-container div {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: white;
-    transition: color 0.3s ease;
+.nav-logo-white {
+    display: block;
 }
 
-nav.scrolled .logo-container div {
-    color: #212374;
-    /* Navy for readability on scroll */
+.nav-logo-black {
+    display: none;
+}
+
+nav.scrolled .nav-logo-white {
+    display: none;
+}
+
+nav.scrolled .nav-logo-black {
+    display: block;
 }
 
 .vertical-left {
@@ -841,7 +846,6 @@ nav.scrolled .logo-container div {
     display: flex;
     flex-direction: column;
     text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -853,6 +857,8 @@ nav.scrolled .logo-container div {
     height: 280px;
     /* Fixed height for consistency */
     overflow: hidden;
+    background: transparent;
+    line-height: 0;
 }
 
 .card-image img {
@@ -860,6 +866,7 @@ nav.scrolled .logo-container div {
     height: 100%;
     object-fit: cover;
     display: block;
+    transform: scale(1.05);
 }
 
 .card-text {
@@ -889,14 +896,26 @@ nav.scrolled .logo-container div {
     color: white;
 }
 
+.card-teal .card-image {
+    background-color: #5fb4b4;
+}
+
 .card-blue {
     background-color: #b4d4f2;
     color: #212374;
 }
 
+.card-blue .card-image {
+    background-color: #b4d4f2;
+}
+
 .card-red {
     background-color: #d1432f;
     color: white;
+}
+
+.card-red .card-image {
+    background-color: #d1432f;
 }
 
 #locations-section {
@@ -930,7 +949,20 @@ nav.scrolled .logo-container div {
     justify-content: center;
     text-align: center;
     padding: 1rem;
+}
 
+.location-img-wrapper {
+    border-radius: 20px;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.locations-card img.card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transform: scale(1.05);
 }
 
 #vertical-split {
@@ -1043,6 +1075,48 @@ nav.scrolled .logo-container div {
 
 .footer-icon {
     height: 50px;
+}
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #25D366;
+    transition: color 0.3s ease;
+}
+
+.footer-whatsapp:hover {
+    color: #25D366;
+}
+
+.footer-whatsapp .whatsapp-icon {
+    height: 44px;
+    width: 44px;
+    color: #25D366;
+}
+
+.footer-email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-email:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-email svg {
+    height: 38px;
+    width: 38px;
+    transform: translateY(-2px);
 }
 
 /* --- CAROUSEL STYLES --- */
@@ -1209,6 +1283,11 @@ nav.scrolled .logo-container div {
         align-items: center;
         text-align: center;
         gap: 2rem;
+    }
+
+    .footer-icons {
+        justify-content: center;
+        width: 100%;
     }
 
     #footer-cuties {
