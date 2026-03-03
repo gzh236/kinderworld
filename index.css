@@ -137,6 +137,14 @@ nav.scrolled .nav-links li a:hover {
     .menu-toggle {
         display: flex;
     }
+
+    .nav-icon-logo {
+        height: 35px;
+    }
+
+    .logo-container img.nav-logo {
+        height: 30px;
+    }
 }
 
 .menu-toggle span {
@@ -179,6 +187,11 @@ nav.scrolled .menu-toggle span {
     display: flex;
     gap: 1rem;
     align-items: center;
+}
+
+.nav-icon-logo {
+    height: 50px;
+    width: auto;
 }
 
 .logo-container img.nav-logo {
