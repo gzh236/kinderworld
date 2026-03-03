@@ -134,16 +134,37 @@ nav.scrolled .nav-links li a:hover {
 
 /* Ensure it only shows on mobile */
 @media (max-width: 768px) {
+    nav {
+        padding: 1rem 4%;
+    }
+
     .menu-toggle {
         display: flex;
+        flex-shrink: 0;
+        margin-left: 0.5rem;
+    }
+
+    .logo-container {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .logo-container a {
+        min-width: 0;
+        overflow: hidden;
+        gap: 0.4rem;
     }
 
     .nav-icon-logo {
-        height: 35px;
+        height: 40px;
+        flex-shrink: 0;
     }
 
     .logo-container img.nav-logo {
-        height: 30px;
+        height: 28px;
+        width: auto;
+        flex-shrink: 1;
+        min-width: 0;
     }
 }
 
@@ -187,6 +208,10 @@ nav.scrolled .menu-toggle span {
     display: flex;
     gap: 1rem;
     align-items: center;
+}
+
+.logo-container {
+    gap: 0.4rem;
 }
 
 .nav-icon-logo {
